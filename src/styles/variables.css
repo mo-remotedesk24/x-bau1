@@ -1,0 +1,71 @@
+/* X-Bau Glasmorphismus Design System */
+
+:root {
+  /* Primäre Farben - Elegantes Blaugrau (KEIN Orange) */
+  --glass-primary: rgba(100, 120, 140, 0.1);
+  --glass-secondary: rgba(60, 80, 100, 0.15);
+  --glass-accent: rgba(140, 160, 180, 0.2);
+  
+  /* Hintergrund & Basis */
+  --bg-main: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-secondary: #1a1a2e;
+  --bg-dark: #16213e;
+  
+  /* Text Farben */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  
+  /* Glasmorphismus-Effekte */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-bg-hover: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-border-hover: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-shadow-hover: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+  --glass-blur: blur(12px);
+  --glass-blur-strong: blur(16px);
+  
+  /* Akzentfarben */
+  --accent-blue: #667eea;
+  --accent-purple: #764ba2;
+  --accent-light: #a8b8d8;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-round: 50%;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Z-Index */
+  --z-navbar: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+  
+  /* Breakpoints (for reference in JS) */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1440px;
+}
+
+/* Dark theme variables (optional future enhancement) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-secondary: #0f0f1e;
+    --bg-dark: #0a0a14;
+  }
+}

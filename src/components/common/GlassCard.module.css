@@ -1,0 +1,78 @@
+.glassCard {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Variants */
+.primary {
+  background: var(--glass-primary);
+}
+
+.secondary {
+  background: var(--glass-secondary);
+}
+
+.accent {
+  background: var(--glass-accent);
+}
+
+/* Elevation Levels */
+.low {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.medium {
+  box-shadow: var(--glass-shadow);
+}
+
+.high {
+  box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Hoverable Effect */
+.hoverable {
+  cursor: pointer;
+}
+
+.hoverable:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+.hoverable:hover .glowEffect {
+  opacity: 1;
+}
+
+/* Glow Effect Overlay */
+.glassCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+  border-radius: var(--radius-lg);
+}
+
+.hoverable:hover::before {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .glassCard {
+    padding: var(--spacing-md);
+  }
+}
